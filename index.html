@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="formvalidation.css">
+    <title>STUDENT-REGISTRATION-FORM</title>
+  </head>
+  <style>
+    
+  </style>
+  <body>
+    <!-- FORM VALIDATION FUNCTION -->
+    <form onsubmit="return validateform()">
+      <!-- NAME -->
+      <label for="name">NAME</label>
+      <input type="text" name="name" id="name" placeholder="Enter User Name" />
+      <p id="name-error" style="color: red"></p>
+
+      <!-- ROLL NUMBER -->
+      <label for="rollNumber">ROLL NUMBER</label>
+      <input
+        type="text"
+        name="rollNumber"
+        id="rollNumber"
+        placeholder="204N1AXXXX"
+      />
+      <p id="roll-error" style="color: red"></p>
+
+      <!--  MOBILE NUMBER-->
+      <label for="mobile">PHONE</label>
+      <input type="number" name="mobile" id="mobile" placeholder="1234567890" />
+      <p id="mobile-error" style="color: red"></p>
+
+      <!-- PASSWORD -->
+      <label for="passcode">PASSWORD</label>
+      <input
+        type="password"
+        name="passcode"
+        id="passcode"
+        placeholder="Enter Password"
+      />
+      <p id="password-error" style="color: red"></p>
+
+      <input type="submit" value="submit" />
+    </form>
+  </body>
+  <script src="formvalidataion.js">
+   
+  </script>
+</html>

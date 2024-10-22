@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return validateForm()">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <input type="submit" value="Submit">
+      </form>
+      
+      <p id="error-message" style="color:red;"></p>
+      
+</body>
+<script>
+    function validateForm() {
+    var nameField = document.getElementById("name").value;
+    var regex = /^[A-Z a-z]+$/; // Regular expression for alphabets only (uppercase and lowercase)
+    
+    if (!regex.test(nameField)) {
+        document.getElementById("error-message").innerText = "Please enter only alphabets.";
+        return false; // Prevent form submission
+    }
+    
+    document.getElementById("error-message").innerText = ""; // Clear error message
+    return true; // Allow form submission
+}
+
+</script>
+</html>
